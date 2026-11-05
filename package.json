@@ -1,0 +1,17 @@
+{
+  "name": "loanapi",
+  "version": "1.0.0",
+  "description": "learn GraphQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "Danilo-Arturo",
+  "license": "ISC",
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "^5.5.1",
+    "graphql": "^16.15.0"
+  }
+}
