@@ -4,6 +4,7 @@
     "target": "ES2022",                          /* Matches modern Node.js versions */
     "module": "NodeNext",                        /* Enables modern ESM resolution (recommended for Apollo Server v4) */
     "moduleResolution": "NodeNext",
+    "types": ["node"],                           /* Includes Node.js type definitions for global objects and modules */
     "rootDir": "./src",                          /* Source files location */
     "outDir": "./dist",                          /* Compiled JavaScript destination */
     
