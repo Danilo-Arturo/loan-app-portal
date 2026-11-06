@@ -1,0 +1,236 @@
+
+{
+  "applicants": [
+    {
+      "id": "USER-001",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john.smith@example.com",
+      "phone": "330-555-0101",
+      "applicationIds": ["APP-1001"]
+    },
+    {
+      "id": "USER-002",
+      "firstName": "Mary",
+      "lastName": "Smith",
+      "email": "mary.smith@example.com",
+      "phone": "330-555-0102",
+      "applicationIds": ["APP-1001"]
+    },
+    {
+      "id": "USER-003",
+      "firstName": "James",
+      "lastName": "Miller",
+      "email": "james.miller@example.com",
+      "phone": "330-555-0103",
+      "applicationIds": ["APP-1002"]
+    },
+    {
+      "id": "USER-004",
+      "firstName": "Sarah",
+      "lastName": "Williams",
+      "email": "sarah.williams@example.com",
+      "phone": "330-555-0104",
+      "applicationIds": ["APP-1003"]
+    }
+  ],
+  "farms": [
+    {
+      "id": "FARM-001",
+      "name": "Smith Family Farms",
+      "county": "Wayne",
+      "state": "OH",
+      "acreage": 250,
+      "commodities": ["Corn", "Soybeans"]
+    },
+    {
+      "id": "FARM-002",
+      "name": "Miller Dairy",
+      "county": "Stark",
+      "state": "OH",
+      "acreage": 180,
+      "commodities": ["Dairy", "Hay"]
+    },
+    {
+      "id": "FARM-003",
+      "name": "Williams Acres",
+      "county": "Wood",
+      "state": "OH",
+      "acreage": 320,
+      "commodities": ["Corn", "Wheat", "Soybeans"]
+    }
+  ],
+  "loanPrograms": [
+    {
+      "id": "PROGRAM-001",
+      "name": "Direct Farm Ownership Loan",
+      "loanType": "FARM_OWNERSHIP",
+      "description": "Financing for purchasing or improving farm property."
+    },
+    {
+      "id": "PROGRAM-002",
+      "name": "Direct Farm Operating Loan",
+      "loanType": "FARM_OPERATING",
+      "description": "Financing for farm operating expenses."
+    },
+    {
+      "id": "PROGRAM-003",
+      "name": "Farm Operating Microloan",
+      "loanType": "FARM_OPERATING_MICROLOAN",
+      "description": "Smaller-scale financing for eligible farm operating expenses."
+    }
+  ],
+  "applications": [
+    {
+      "id": "APP-1001",
+      "status": "DRAFT",
+      "requestedAmount": 12500000,
+      "submittedAt": null,
+      "farmId": "FARM-001",
+      "loanProgramId": "PROGRAM-001",
+      "participants": [
+        {
+          "id": "PART-001",
+          "applicantId": "USER-001",
+          "role": "PRIMARY"
+        },
+        {
+          "id": "PART-002",
+          "applicantId": "USER-002",
+          "role": "CO_APPLICANT"
+        }
+      ],
+      "responseIds": ["RESP-001", "RESP-002", "RESP-003"],
+      "documentIds": ["DOC-001", "DOC-002", "DOC-003"]
+    },
+    {
+      "id": "APP-1002",
+      "status": "UNDER_REVIEW",
+      "requestedAmount": 4500000,
+      "submittedAt": "2026-10-20T14:30:00.000Z",
+      "farmId": "FARM-002",
+      "loanProgramId": "PROGRAM-002",
+      "participants": [
+        {
+          "id": "PART-003",
+          "applicantId": "USER-003",
+          "role": "PRIMARY"
+        }
+      ],
+      "responseIds": ["RESP-004", "RESP-005"],
+      "documentIds": ["DOC-004", "DOC-005"]
+    },
+    {
+      "id": "APP-1003",
+      "status": "PENDING_DOCUMENTS",
+      "requestedAmount": 2750000,
+      "submittedAt": "2026-10-25T09:15:00.000Z",
+      "farmId": "FARM-003",
+      "loanProgramId": "PROGRAM-003",
+      "participants": [
+        {
+          "id": "PART-004",
+          "applicantId": "USER-004",
+          "role": "PRIMARY"
+        }
+      ],
+      "responseIds": ["RESP-006", "RESP-007"],
+      "documentIds": ["DOC-006", "DOC-007"]
+    }
+  ],
+  "responses": [
+    {
+      "id": "RESP-001",
+      "question": "How long have you operated this farm?",
+      "answer": "12 years",
+      "updatedAt": "2026-11-01T10:00:00.000Z"
+    },
+    {
+      "id": "RESP-002",
+      "question": "What is the primary purpose of the loan?",
+      "answer": "Purchase additional farmland",
+      "updatedAt": "2026-11-01T10:15:00.000Z"
+    },
+    {
+      "id": "RESP-003",
+      "question": "What is the anticipated annual farm income?",
+      "answer": "185000",
+      "updatedAt": "2026-11-01T10:30:00.000Z"
+    },
+    {
+      "id": "RESP-004",
+      "question": "What are your primary operating expenses?",
+      "answer": "Feed, fertilizer, equipment maintenance",
+      "updatedAt": "2026-10-18T12:00:00.000Z"
+    },
+    {
+      "id": "RESP-005",
+      "question": "How many acres do you currently operate?",
+      "answer": "180",
+      "updatedAt": "2026-10-18T12:30:00.000Z"
+    },
+    {
+      "id": "RESP-006",
+      "question": "What is the intended use of the loan?",
+      "answer": "Purchase seed and equipment",
+      "updatedAt": "2026-10-24T11:00:00.000Z"
+    },
+    {
+      "id": "RESP-007",
+      "question": "Do you have additional income sources?",
+      "answer": null,
+      "updatedAt": null
+    }
+  ],
+  "documents": [
+    {
+      "id": "DOC-001",
+      "fileName": "farm-financial-statement.pdf",
+      "documentType": "FINANCIAL_STATEMENT",
+      "status": "UPLOADED",
+      "uploadedAt": "2026-11-01T11:00:00.000Z"
+    },
+    {
+      "id": "DOC-002",
+      "fileName": "farm-tax-return.pdf",
+      "documentType": "TAX_RETURN",
+      "status": "ACCEPTED",
+      "uploadedAt": "2026-11-01T11:30:00.000Z"
+    },
+    {
+      "id": "DOC-003",
+      "fileName": "farm-deed.pdf",
+      "documentType": "PROPERTY_RECORD",
+      "status": "REQUIRED",
+      "uploadedAt": null
+    },
+    {
+      "id": "DOC-004",
+      "fileName": "operating-budget.pdf",
+      "documentType": "OPERATING_BUDGET",
+      "status": "ACCEPTED",
+      "uploadedAt": "2026-10-19T09:00:00.000Z"
+    },
+    {
+      "id": "DOC-005",
+      "fileName": "equipment-inventory.pdf",
+      "documentType": "EQUIPMENT_INVENTORY",
+      "status": "UPLOADED",
+      "uploadedAt": "2026-10-19T09:30:00.000Z"
+    },
+    {
+      "id": "DOC-006",
+      "fileName": "business-financials.pdf",
+      "documentType": "FINANCIAL_STATEMENT",
+      "status": "ACCEPTED",
+      "uploadedAt": "2026-10-24T10:00:00.000Z"
+    },
+    {
+      "id": "DOC-007",
+      "fileName": "tax-return.pdf",
+      "documentType": "TAX_RETURN",
+      "status": "REQUIRED",
+      "uploadedAt": null
+    }
+  ]
+}
