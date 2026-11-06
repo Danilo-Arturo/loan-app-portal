@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* Target and Module Settings */
+    "target": "ES2022",                          /* Matches modern Node.js versions */
+    "module": "NodeNext",                        /* Enables modern ESM resolution (recommended for Apollo Server v4) */
+    "moduleResolution": "NodeNext",
+    "rootDir": "./src",                          /* Source files location */
+    "outDir": "./dist",                          /* Compiled JavaScript destination */
+    
+    /* Strict Type-Checking Options */
+    "strict": true,                              /* Enables all strict type-checking options */
+    "noImplicitAny": true,                       /* Raises error on expressions and declarations with an implied 'any' type */
+    "strictNullChecks": true,                    /* Ensures null/undefined are handled safely in your GraphQL resolvers */
+    "strictFunctionTypes": true,
+    
+    /* Linter/Quality Checks */
+    "noUnusedLocals": true,                      /* Report errors on unused local variables */
+    "noUnusedParameters": true,                  /* Report errors on unused function/resolver arguments */
+    "noImplicitReturns": true,                   /* Report error when not all code paths in function return a value */
+    "noFallthroughCasesInSwitch": true,           /* Report errors for fallthrough cases in switch statement */
+    
+    /* Interop and Advanced Options */
+    "esModuleInterop": true,                     /* Emits additional JavaScript to ease support for importing CommonJS modules */
+    "skipLibCheck": true,                        /* Skip type checking of declaration files (speeds up compilation) */
+    "forceConsistentCasingInFileNames": true,    /* Disallow inconsistently-cased references to the same file */
+    "resolveJsonModule": true                    /* Allows importing .json files (useful for package.json or config files) */
+  },
+  "include": ["src/**/*"],                       /* Files to include in compilation */
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"] /* Files to ignore */
+}

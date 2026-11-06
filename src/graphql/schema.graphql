@@ -1,0 +1,137 @@
+scalar DateTime
+
+# -------------------------
+# ENUMS
+# -------------------------
+
+enum ApplicationStatus {
+  DRAFT
+  SUBMITTED
+  UNDER_REVIEW
+  PENDING_DOCUMENTS
+  APPROVED
+  REJECTED
+}
+
+enum LoanType {
+  FARM_OWNERSHIP
+  FARM_OPERATING
+  FARM_OWNERSHIP_MICROLOAN
+  FARM_OPERATING_MICROLOAN
+  GUARANTEED_FARM_OPERATING
+  EMERGENCY
+  YOUTH
+}
+
+enum DocumentStatus {
+  REQUIRED
+  UPLOADED
+  ACCEPTED
+  REJECTED
+}
+
+enum ParticipantRole {
+  APPLICANT
+  CO_APPLICANT
+  ENTITY_MEMBER
+}
+
+# -------------------------
+# OBJECT TYPES
+# -------------------------
+
+type Applicant {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  phone: String
+  applications: [Application!]!
+}
+
+type ApplicationParticipant {
+  id: ID!
+  role: ParticipantRole!
+  applicant: Applicant!
+}
+
+type Farm {
+  id: ID!
+  name: String!
+  county: String!
+  state: String!
+  acreage: Float!
+  commodities: [String!]!
+}
+
+type LoanProgram {
+  id: ID!
+  name: String!
+  loanType: LoanType!
+  description: String
+}
+
+type ApplicationResponse {
+  id: ID!
+  question: String!
+  answer: String
+  updatedAt: DateTime
+}
+
+type Document {
+  id: ID!
+  fileName: String!
+  documentType: String!
+  status: DocumentStatus!
+  uploadedAt: DateTime
+}
+
+type Application {
+  id: ID!
+  status: ApplicationStatus!
+  requestedAmount: Int!
+  submittedAt: DateTime
+
+  participants: [ApplicationParticipant!]!
+  farm: Farm!
+  loanProgram: LoanProgram!
+
+  responses: [ApplicationResponse!]!
+  documents: [Document!]!
+}
+
+# -------------------------
+# INPUT TYPES
+# -------------------------
+
+input UpdateResponseInput {
+  applicationId: ID!
+  responseId: ID!
+  answer: String!
+}
+
+# -------------------------
+# QUERIES
+# -------------------------
+
+type Query {
+  applications(
+    status: ApplicationStatus
+    limit: Int = 20
+    offset: Int = 0
+  ): [Application!]!
+
+  application(id: ID!): Application
+
+  applicant(id: ID!): Applicant
+}
+
+# -------------------------
+# MUTATIONS
+# -------------------------
+
+type Mutation {
+  updateApplicationResponse(
+    input: UpdateResponseInput!
+  ): ApplicationResponse!
+}
