@@ -31,7 +31,7 @@ enum DocumentStatus {
 }
 
 enum ParticipantRole {
-  APPLICANT
+  PRIMARY
   CO_APPLICANT
   ENTITY_MEMBER
 }

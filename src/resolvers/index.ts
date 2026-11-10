@@ -117,5 +117,25 @@ export const resolvers = {
       data.applicants.find(
         (applicant: any) => applicant.id === parent.applicantId
       )
+  },
+
+  Mutation: {
+    updateApplicationResponse: (_parent: unknown, args: any) => {
+      const response = data.responses.find(
+        (response: any) => response.id === args.responseId
+      );
+
+      if (!response) {
+        throw new Error("Response not found");
+      }
+
+      //JS objects are referece types so we can modify the response object directly and it will be reflected in the data.responses array.
+      response.answer = args.answer;
+      response.updatedAt = new Date().toISOString();
+      return response;
+
+      //This is an in-memory update and works for the current setup with applications.json. 
+      // In a real-world application, you would typically persist the changes to a database or another storage mechanism.
+    }
   }
 };
