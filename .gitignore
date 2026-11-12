@@ -1,4 +1,4 @@
-node_modules/
+apps/graphql-gateway/node_modules/
 readme.md
 /src/graphql/readme.md
 /src/resolvers/readme.md
