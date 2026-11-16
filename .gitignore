@@ -1,4 +1,8 @@
 apps/graphql-gateway/node_modules/
-readme.md
-/src/graphql/readme.md
-/src/resolvers/readme.md
+apps/graphql-gateway/readme.md
+apps/graphql-gateway/src/graphql/readme.md
+apps/graphql-gateway/src/resolvers/readme.md
+apps/graphql-gateway/src/data/readme.md
+
+services/user-service/node_modules/
+services/readme.md
