@@ -6,3 +6,5 @@ apps/graphql-gateway/src/data/readme.md
 
 services/user-service/node_modules/
 services/readme.md
+
+services/application-service/node_modules/

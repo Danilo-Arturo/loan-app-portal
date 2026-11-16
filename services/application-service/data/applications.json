@@ -1,0 +1,58 @@
+[
+    {
+      "id": "APP-1001",
+      "status": "DRAFT",
+      "requestedAmount": 12500000,
+      "submittedAt": null,
+      "farmId": "FARM-001",
+      "loanProgramId": "PROGRAM-001",
+      "participants": [
+        {
+          "id": "PART-001",
+          "applicantId": "USER-001",
+          "role": "PRIMARY"
+        },
+        {
+          "id": "PART-002",
+          "applicantId": "USER-002",
+          "role": "CO_APPLICANT"
+        }
+      ],
+      "responseIds": ["RESP-001", "RESP-002", "RESP-003"],
+      "documentIds": ["DOC-001", "DOC-002", "DOC-003"]
+    },
+    {
+      "id": "APP-1002",
+      "status": "UNDER_REVIEW",
+      "requestedAmount": 4500000,
+      "submittedAt": "2026-10-20T14:30:00.000Z",
+      "farmId": "FARM-002",
+      "loanProgramId": "PROGRAM-002",
+      "participants": [
+        {
+          "id": "PART-003",
+          "applicantId": "USER-003",
+          "role": "PRIMARY"
+        }
+      ],
+      "responseIds": ["RESP-004", "RESP-005"],
+      "documentIds": ["DOC-004", "DOC-005"]
+    },
+    {
+      "id": "APP-1003",
+      "status": "PENDING_DOCUMENTS",
+      "requestedAmount": 2750000,
+      "submittedAt": "2026-10-25T09:15:00.000Z",
+      "farmId": "FARM-003",
+      "loanProgramId": "PROGRAM-003",
+      "participants": [
+        {
+          "id": "PART-004",
+          "applicantId": "USER-004",
+          "role": "PRIMARY"
+        }
+      ],
+      "responseIds": ["RESP-006", "RESP-007"],
+      "documentIds": ["DOC-006", "DOC-007"]
+    }
+  ]

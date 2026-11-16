@@ -1,0 +1,44 @@
+[
+    {
+      "id": "RESP-001",
+      "question": "How long have you operated this farm?",
+      "answer": "12 years",
+      "updatedAt": "2026-11-01T10:00:00.000Z"
+    },
+    {
+      "id": "RESP-002",
+      "question": "What is the primary purpose of the loan?",
+      "answer": "Purchase additional farmland",
+      "updatedAt": "2026-11-01T10:15:00.000Z"
+    },
+    {
+      "id": "RESP-003",
+      "question": "What is the anticipated annual farm income?",
+      "answer": "185000",
+      "updatedAt": "2026-11-01T10:30:00.000Z"
+    },
+    {
+      "id": "RESP-004",
+      "question": "What are your primary operating expenses?",
+      "answer": "Feed, fertilizer, equipment maintenance",
+      "updatedAt": "2026-10-18T12:00:00.000Z"
+    },
+    {
+      "id": "RESP-005",
+      "question": "How many acres do you currently operate?",
+      "answer": "180",
+      "updatedAt": "2026-10-18T12:30:00.000Z"
+    },
+    {
+      "id": "RESP-006",
+      "question": "What is the intended use of the loan?",
+      "answer": "Purchase seed and equipment",
+      "updatedAt": "2026-10-24T11:00:00.000Z"
+    },
+    {
+      "id": "RESP-007",
+      "question": "Do you have additional income sources?",
+      "answer": null,
+      "updatedAt": null
+    }
+  ]
